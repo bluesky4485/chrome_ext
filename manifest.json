@@ -25,18 +25,56 @@
 //         "default_popup": "popup.html"        // optional
 //     }
 // }
+// {
+//     "manifest_version": 2,
+//     "name": "missing button",
+//     "version": "1.0",
+//     "description": "missing button",
+//     "content_scripts": [
+//         {
+//             "matches": ["*://www.google.com/"],
+//             "js": ["js/cannot_touch.js"]
+//         }
+//     ]
+//     // "background": {
+//     //     "scripts": ["js/background.js"]
+//     // }
+// }
 {
     "manifest_version": 2,
-    "name": "missing button",
+    "name": "我的IP",
     "version": "1.0",
-    "description": "missing button",
-    "content_scripts": [
-        {
-            "matches": ["*://www.google.com/"],
-            "js": ["js/cannot_touch.js"]
-        }
-    ]
-    // "background": {
-    //     "scripts": ["js/background.js"]
-    // }
+    "description": "查找我的IP",
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "我的IP",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://120.27.4.87:888/getip"
+    ],
+    "background": {
+        "scripts": ["js/status.js"]
+    }
 }
+// {
+//     "manifest_version": 2,
+//     "name": "天气预报",
+//     "version": "1.0",
+//     "description": "查找天气预报",
+//     "browser_action": {
+//         "default_icon": {
+//             "19": "images/icon19.png",
+//             "38": "images/icon38.png"
+//         },
+//         "default_title": "天气预报",
+//         "default_popup": "popupw.html"
+//     },
+//     "permissions": [
+//         "http://api.openweathermap.org/data/2.5/forecast/city?q=*"
+//     ],
+//     "options_page": "options.html"
+// }
