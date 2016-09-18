@@ -1,0 +1,42 @@
+// {
+//     "manifest_version": 2,
+//     "name": "我的时钟",
+//     "version": "1.0",
+//     "description": "我的第一个chrome扩展",
+//     "icons": {
+//         "16": "images/icon16.png",
+//         "48": "images/icon48.png",
+//         "128": "images/icon128.png"
+//     },
+//     // "browser_action": {
+//     //     "default_icon": {
+//     //         "19": "images/icon19.png",
+//     //         "38": "images/icon38.png"
+//     //     },
+//     //     "default_title": "我的时钟",
+//     //     "default_popup": "popup.html"
+//     // },
+//     "browser_action": {
+//         "default_icon": {                    // optional
+//             "19": "images/icon19.png",           // optional
+//             "38": "images/icon38.png"            // optional
+//         },
+//         "default_title": "Google Mail",      // optional; shown in tooltip
+//         "default_popup": "popup.html"        // optional
+//     }
+// }
+{
+    "manifest_version": 2,
+    "name": "missing button",
+    "version": "1.0",
+    "description": "missing button",
+    "content_scripts": [
+        {
+            "matches": ["*://www.google.com/"],
+            "js": ["js/cannot_touch.js"]
+        }
+    ]
+    // "background": {
+    //     "scripts": ["js/background.js"]
+    // }
+}
